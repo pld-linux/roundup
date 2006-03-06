@@ -1,4 +1,5 @@
 Summary:	Roundup Issue Tracker
+Summary(pl):	Roundup - narzêdzie do ¶ledzenia zg³oszeñ
 Name:		roundup
 Version:	1.1.1
 Release:	0.1
@@ -12,8 +13,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A simple-to-use and -install issue-tracking system with command-line, web and
-e-mail interfaces. Highly customisable.
+A simple-to-use and -install issue-tracking system with command-line,
+web and e-mail interfaces. Highly customisable.
+
+%description -l pl
+£atwy w u¿yciu i instalacji system ¶ledzenia zg³oszeñ z interfejsami
+linii poleceñ, WWW i e-mail. Wysoko konfigurowalny.
 
 %prep
 %setup -q
