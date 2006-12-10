@@ -1,0 +1,11 @@
+--- roundup-1.1.1/setup.py.orig	2006-12-10 13:25:39.000000000 +0100
++++ roundup-1.1.1/setup.py	2006-12-10 13:25:48.000000000 +0100
+@@ -306,7 +306,7 @@
+ 
+     # install man pages on POSIX platforms
+     if os.name == 'posix':
+-        installdatafiles.append(('man/man1', ['doc/roundup-admin.1',
++        installdatafiles.append(('share/man/man1', ['doc/roundup-admin.1',
+             'doc/roundup-mailgw.1', 'doc/roundup-server.1',
+             'doc/roundup-demo.1']))
+ 
