@@ -2,12 +2,13 @@ Summary:	Roundup Issue Tracker
 Summary(pl):	Roundup - narzêdzie do ¶ledzenia zg³oszeñ
 Name:		roundup
 Version:	1.1.1
-Release:	0.1
+Release:	0.5
 License:	See COPYING.txt
 Group:		Applications/WWW
 Source0:	http://cheeseshop.python.org/packages/source/r/roundup/%{name}-%{version}.tar.gz
 # Source0-md5:	40d74c12c72ff82dbfc8a4f893514dcf
 URL:		http://roundup.sourceforge.net/
+Patch0:		%{name}-mandir.patch
 Requires:	pydoc
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,13 +23,25 @@ linii poleceñ, WWW i e-mail. Wysoko konfigurowalny.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
+%{__python} setup.py install \
+	--root=$RPM_BUILD_ROOT
+
+
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {CHANGES,COPYING,README}.txt
+%doc {CHANGES,COPYING,README}.txt doc/*txt
+%attr(755,root,root) %{_bindir}/roundup-*
+%{py_sitescriptdir}/roundup
+%{_datadir}/roundup
+%{_mandir}/man1/*
