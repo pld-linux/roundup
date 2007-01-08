@@ -9,6 +9,7 @@ Source0:	http://cheeseshop.python.org/packages/source/r/roundup/%{name}-%{versio
 # Source0-md5:	40d74c12c72ff82dbfc8a4f893514dcf
 URL:		http://roundup.sourceforge.net/
 Patch0:		%{name}-mandir.patch
+BuildRequires:	rpm-pythonprov
 Requires:	pydoc
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
