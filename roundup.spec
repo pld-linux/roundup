@@ -1,5 +1,5 @@
 Summary:	Roundup Issue Tracker
-Summary(pl.UTF-8):   Roundup - narzędzie do śledzenia zgłoszeń
+Summary(pl.UTF-8):	Roundup - narzędzie do śledzenia zgłoszeń
 Name:		roundup
 Version:	1.1.1
 Release:	0.5
