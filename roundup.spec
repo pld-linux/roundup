@@ -9,7 +9,7 @@ Source0:	http://pypi.python.org/packages/source/r/roundup/%{name}-%{version}.tar
 # Source0-md5:	e364bb8026761829752ffec76e33065f
 URL:		http://roundup.sourceforge.net/
 Patch0:		%{name}-mandir.patch
-BuildRequires:	python-devel >= 2.3
+BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 Requires:	pydoc
 BuildArch:	noarch
