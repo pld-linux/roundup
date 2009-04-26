@@ -1,14 +1,13 @@
 Summary:	Roundup Issue Tracker
 Summary(pl.UTF-8):	Roundup - narzędzie do śledzenia zgłoszeń
 Name:		roundup
-Version:	1.4.6
+Version:	1.4.8
 Release:	1
 License:	distributable (BSD-like, see COPYING.txt)
 Group:		Applications/WWW
 Source0:	http://pypi.python.org/packages/source/r/roundup/%{name}-%{version}.tar.gz
-# Source0-md5:	e364bb8026761829752ffec76e33065f
+# Source0-md5:	a35e85dc3328d8c7ff774672f5f8a2e8
 URL:		http://roundup.sourceforge.net/
-Patch0:		%{name}-mandir.patch
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 Requires:	pydoc
@@ -25,7 +24,6 @@ linii poleceń, WWW i e-mail. Wysoko konfigurowalny.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,5 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc {CHANGES,COPYING,README}.txt doc/*txt
 %attr(755,root,root) %{_bindir}/roundup-*
 %{py_sitescriptdir}/roundup
+%{py_sitescriptdir}/roundup-%{version}-*.egg-info
 %{_datadir}/roundup
 %{_mandir}/man1/*
