@@ -2,7 +2,7 @@ Summary:	Roundup Issue Tracker
 Summary(pl.UTF-8):	Roundup - narzędzie do śledzenia zgłoszeń
 Name:		roundup
 Version:	1.4.8
-Release:	1
+Release:	2
 License:	distributable (BSD-like, see COPYING.txt)
 Group:		Applications/WWW
 Source0:	http://pypi.python.org/packages/source/r/roundup/%{name}-%{version}.tar.gz
